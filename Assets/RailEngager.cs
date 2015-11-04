@@ -246,8 +246,8 @@ public class RailEngager : MonoBehaviour {
 			} else {
 				Debug.Log("FEELS LIKE FALLING");
 				player.playerMode = PlayerMode.Jump;
-				GetComponent<Rigidbody>().AddForce(segments[current].transform.forward*(80000f));
-				GetComponent<Rigidbody>().AddForce(this.transform.up*(90000f));
+				GetComponent<Rigidbody>().AddForce(segments[current].transform.forward*(8000f));
+				GetComponent<Rigidbody>().AddForce(this.transform.up*(9000f));
 
 			}
 		} else {
@@ -270,8 +270,8 @@ public class RailEngager : MonoBehaviour {
 			} else {
 				Debug.Log("FEELS LIKE FALLING");
 				player.playerMode = PlayerMode.Jump;
-				GetComponent<Rigidbody>().AddForce(segments[current].transform.forward*(-80000f));
-				GetComponent<Rigidbody>().AddForce(this.transform.up*(90000f));
+				GetComponent<Rigidbody>().AddForce(segments[current].transform.forward*(-8000f));
+				GetComponent<Rigidbody>().AddForce(this.transform.up*(9000f));
 
 			}
 		}
@@ -304,6 +304,7 @@ public class RailEngager : MonoBehaviour {
 				segments[i].GetComponent<RailComponent>().next = segments[i+1].GetComponent<RailComponent>().transform;
 			} else {
 				segments[i].GetComponent<RailComponent>().tail = true;
+				segments[i].GetComponent<RailComponent>().GetComponent<Collider>().enabled = false;
 				lastTail = i;
 //				tails[splineNumber] = i;
 				splineNumber++;
@@ -314,6 +315,7 @@ public class RailEngager : MonoBehaviour {
 					segments[lastHead].GetComponent<RailComponent>().last = segments[i].GetComponent<RailComponent>().transform;
 				}
 				segments[i+1].GetComponent<RailComponent>().head = true;
+				segments[i+1].GetComponent<RailComponent>().GetComponent<Collider>().enabled = false;
 				lastHead = i+1;
 //				Debug.Log("LH: "+lastHead);
 //				heads[splineNumber] = i+1;
@@ -327,8 +329,10 @@ public class RailEngager : MonoBehaviour {
 
 		segments[0].GetComponent<RailComponent>().next = segments[1].GetComponent<RailComponent>().transform;
 		segments[0].GetComponent<RailComponent>().head = true;
+		segments[0].GetComponent<RailComponent>().GetComponent<Collider>().enabled = false;
 		segments [0].GetComponent<RailComponent> ().railNumber = 0;
 		segments[segments.Length-1].GetComponent<RailComponent>().tail = true;
+		segments[segments.Length-1].GetComponent<RailComponent>().GetComponent<Collider>().enabled = false;
 		segments[segments.Length-1].GetComponent<RailComponent>().last = segments[segments.Length - 2].GetComponent<RailComponent>().transform;
 		segments[segments.Length-1].GetComponent<RailComponent>().railNumber = splineNumber;
 		spline = segments [segments.Length - 1].GetComponent<RailComponent> ().rail;

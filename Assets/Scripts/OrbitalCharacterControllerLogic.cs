@@ -19,7 +19,6 @@ public class OrbitalCharacterControllerLogic : MonoBehaviour {
 
 	[SerializeField]
 	private float colIdle, colRun, colJump;
-	
 
 	public bool grounded = false;
 	public float speed = 0.0f;
@@ -82,14 +81,16 @@ public class OrbitalCharacterControllerLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		velocity = this.GetComponent<Rigidbody> ().velocity.magnitude;
+//		velocity = this.GetComponent<Rigidbody> ().velocity.magnitude;
 //		Debug.Log("H:"+horizontal);
 //		Debug.Log("V:"+vertical);
 
 		if (playerMode == PlayerMode.Jump) {
 			animator.applyRootMotion = false;
 			GetComponent<CapsuleCollider> ().height = colJump;
-		} else if(playerMode == PlayerMode.Grind){
+		} else if (playerMode == PlayerMode.Grind) {
+			animator.applyRootMotion = false;
+		} else if (playerMode == PlayerMode.Pivot) {
 			animator.applyRootMotion = false;
 		} else {
 			animator.applyRootMotion = true;

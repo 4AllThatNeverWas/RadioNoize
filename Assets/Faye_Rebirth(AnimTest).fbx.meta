@@ -2722,7 +2722,39 @@ ModelImporter:
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: LeftFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+      - name: RightFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
       events: []
       transformMask:
       - path: 
@@ -4390,7 +4422,94 @@ ModelImporter:
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: RightFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: .00712881796
+            outSlope: .00712881796
+            tangentMode: 0
+          - time: .0822633356
+            value: .0582535341
+            inSlope: 1.23060751
+            outSlope: 1.23060751
+            tangentMode: 0
+          - time: .127692968
+            value: .658752561
+            inSlope: 2.79724312
+            outSlope: 2.79724312
+            tangentMode: 0
+          - time: .209387287
+            value: .67165494
+            inSlope: -2.27458
+            outSlope: -2.27458
+            tangentMode: 0
+          - time: .300565392
+            value: .00326493569
+            inSlope: -.0871060416
+            outSlope: -.0871060416
+            tangentMode: 0
+          - time: .575785875
+            value: 0
+            inSlope: .000662598526
+            outSlope: .000662598526
+            tangentMode: 0
+          - time: .60777396
+            value: 0
+            inSlope: .00301073631
+            outSlope: .00301073631
+            tangentMode: 0
+          - time: .819530308
+            value: .00118345022
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: .998302221
+            value: 0
+            inSlope: .00942095928
+            outSlope: .00942095928
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+      - name: LeftFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: -.00790889282
+            outSlope: -.00790889282
+            tangentMode: 0
+          - time: .431792617
+            value: .000364661217
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: .603453338
+            value: .69588232
+            inSlope: 2.81030154
+            outSlope: 2.81030154
+            tangentMode: 0
+          - time: .709166825
+            value: .68912673
+            inSlope: -1.58978331
+            outSlope: -1.58978331
+            tangentMode: 0
+          - time: .841271043
+            value: .00427320553
+            inSlope: -.0731881186
+            outSlope: -.0731881186
+            tangentMode: 0
+          - time: 1.00169778
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
       events: []
       transformMask:
       - path: 

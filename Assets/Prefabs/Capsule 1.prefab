@@ -12,6 +12,7 @@ GameObject:
   - 136: {fileID: 13694390}
   - 23: {fileID: 2342566}
   - 114: {fileID: 11486836}
+  - 136: {fileID: 13616662}
   m_Layer: 0
   m_Name: Capsule 1
   m_TagString: Rail
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173768}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: -1.78999996, y: 6.07999992, z: 16.3199997}
+  m_LocalPosition: {x: -3.53122807, y: 3.70000005, z: -4.81240749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,6 +86,19 @@ MonoBehaviour:
   head: 0
   tail: 0
   segNum: 0
+--- !u!136 &13616662
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.54999995
+  m_Height: 4.26000023
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &13694390
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6580152}
   - 23: {fileID: 2352048}
   - 114: {fileID: 11438922}
+  - 136: {fileID: 13615460}
   m_Layer: 0
   m_Name: Cube 1
   m_TagString: Rail
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.79214668, y: 1.68449926, z: 7.55165863}
+  m_LocalPosition: {x: -2.67000008, y: 3.96000004, z: -1.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +98,19 @@ MonoBehaviour:
   head: 0
   tail: 0
   segNum: 0
+--- !u!136 &13615460
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.54999995
+  m_Height: 4.26000023
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

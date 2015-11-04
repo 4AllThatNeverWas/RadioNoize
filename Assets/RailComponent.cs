@@ -36,20 +36,28 @@ public class RailComponent : MonoBehaviour {
 		} else {
 			GetComponent<Collider>().enabled = true;
 		}
-		dist = Vector3.Distance (this.transform.position, foot.position);
-		if (dist < 3) {
-			rend.material.color = Color.green;	
-			grindable = true;
-		} else {
-			rend.material.color = Color.white;
-			grindable = false;
-		}
+//		dist = Vector3.Distance (this.transform.position, foot.position);
+//		if (dist < 3) {
+//			rend.material.color = Color.green;	
+//			grindable = true;
+//		} else {
+//			rend.material.color = Color.white;
+//			grindable = false;
+//		}
 	}
 
-	void OnCollisionEnter (Collision collision){
-//		if(collision.gameObject.tag=="Player" && playerMode == PlayerMode.Skate){
-//			playerMode = PlayerMode.Grind;
-//		}
+	void OnTriggerEnter (Collider collision){
+		if(collision.gameObject.tag=="Player"){
+			rend.material.color = Color.green;	
+			grindable = true;
+		}
 	
+	}
+	void OnTriggerExit (Collider collision){
+		if(collision.gameObject.tag=="Player"){
+			rend.material.color = Color.white;	
+			grindable = false;
+		}
+		
 	}
 }

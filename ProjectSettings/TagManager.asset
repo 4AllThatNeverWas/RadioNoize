@@ -12,6 +12,9 @@ TagManager:
   - camTarget
   - leadFoot
   - RailPath
+  - Pivotal
+  - PivotPath
+  - Pivot
   layers:
   - Default
   - TransparentFX

@@ -4,5 +4,6 @@ using System.Collections;
 public enum PlayerMode {
 	Skate,
 	Grind,
-	Jump
+	Jump,
+	Pivot
 }
